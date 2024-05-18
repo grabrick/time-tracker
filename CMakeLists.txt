@@ -1,37 +1,14 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.10)
 project(timer)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 14)
 
-# Найти wxWidgets
 find_package(wxWidgets REQUIRED COMPONENTS core base)
-
-# Включить библиотеки и заголовочные файлы wxWidgets
 include(${wxWidgets_USE_FILE})
 
-add_executable(
-        timer GUI/window.cpp
-#        GUI/window.cpp
-#        GUI/window.hpp
-)
-
-# Линковка с wxWidgets
+add_executable(timer src/GUI/mainframe.cpp
+        src/GUI/settings/settings.cpp
+        src/GUI/settings/settings.hpp
+        src/GUI/UI/roundedPanel/roundedPanel.cpp
+        src/GUI/UI/roundedPanel/roundedPanel.hpp)
 target_link_libraries(timer ${wxWidgets_LIBRARIES})
-
-
-#cmake_minimum_required(VERSION 3.10)
-#project(TimeTracker)
-#
-#set(CMAKE_CXX_STANDARD 14)
-#
-## Найти wxWidgets
-#find_package(wxWidgets REQUIRED COMPONENTS core base)
-#
-## Включить библиотеки и заголовочные файлы wxWidgets
-#include(${wxWidgets_USE_FILE})
-#
-## Указать исходные файлы вашего проекта
-#add_executable(TimeTracker src/GUI/window.cpp)
-#
-## Линковка с wxWidgets
-#target_link_libraries(TimeTracker ${wxWidgets_LIBRARIES})

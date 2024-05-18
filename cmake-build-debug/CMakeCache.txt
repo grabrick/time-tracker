@@ -214,6 +214,15 @@ CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+SimpleApp_BINARY_DIR:STATIC=/Users/kirill/CLionProjects/timer/cmake-build-debug
+
+//Value Computed by CMake
+SimpleApp_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+SimpleApp_SOURCE_DIR:STATIC=/Users/kirill/CLionProjects/timer
+
+//Value Computed by CMake
 timer_BINARY_DIR:STATIC=/Users/kirill/CLionProjects/timer/cmake-build-debug
 
 //Value Computed by CMake

@@ -49,13 +49,29 @@ cmake_ninja_workdir = /Users/kirill/CLionProjects/timer/cmake-build-debug/
 
 build cmake_object_order_depends_target_timer: phony || CMakeFiles/timer.dir
 
-build CMakeFiles/timer.dir/GUI/window.cpp.o: CXX_COMPILER__timer_unscanned_Debug /Users/kirill/CLionProjects/timer/GUI/window.cpp || cmake_object_order_depends_target_timer
+build CMakeFiles/timer.dir/src/GUI/mainframe.cpp.o: CXX_COMPILER__timer_unscanned_Debug /Users/kirill/CLionProjects/timer/src/GUI/mainframe.cpp || cmake_object_order_depends_target_timer
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__
-  DEP_FILE = CMakeFiles/timer.dir/GUI/window.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
+  DEP_FILE = CMakeFiles/timer.dir/src/GUI/mainframe.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
   INCLUDES = -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2
   OBJECT_DIR = CMakeFiles/timer.dir
-  OBJECT_FILE_DIR = CMakeFiles/timer.dir/GUI
+  OBJECT_FILE_DIR = CMakeFiles/timer.dir/src/GUI
+
+build CMakeFiles/timer.dir/src/GUI/settings/settings.cpp.o: CXX_COMPILER__timer_unscanned_Debug /Users/kirill/CLionProjects/timer/src/GUI/settings/settings.cpp || cmake_object_order_depends_target_timer
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__
+  DEP_FILE = CMakeFiles/timer.dir/src/GUI/settings/settings.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2
+  OBJECT_DIR = CMakeFiles/timer.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.dir/src/GUI/settings
+
+build CMakeFiles/timer.dir/src/GUI/UI/roundedPanel/roundedPanel.cpp.o: CXX_COMPILER__timer_unscanned_Debug /Users/kirill/CLionProjects/timer/src/GUI/UI/roundedPanel/roundedPanel.cpp || cmake_object_order_depends_target_timer
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXMAC__ -D__WXOSX_COCOA__ -D__WXOSX__
+  DEP_FILE = CMakeFiles/timer.dir/src/GUI/UI/roundedPanel/roundedPanel.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
+  INCLUDES = -isystem /opt/homebrew/lib/wx/include/osx_cocoa-unicode-3.2 -isystem /opt/homebrew/include/wx-3.2
+  OBJECT_DIR = CMakeFiles/timer.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.dir/src/GUI/UI/roundedPanel
 
 
 # =============================================================================
@@ -65,7 +81,7 @@ build CMakeFiles/timer.dir/GUI/window.cpp.o: CXX_COMPILER__timer_unscanned_Debug
 #############################################
 # Link the executable timer
 
-build timer: CXX_EXECUTABLE_LINKER__timer_Debug CMakeFiles/timer.dir/GUI/window.cpp.o
+build timer: CXX_EXECUTABLE_LINKER__timer_Debug CMakeFiles/timer.dir/src/GUI/mainframe.cpp.o CMakeFiles/timer.dir/src/GUI/settings/settings.cpp.o CMakeFiles/timer.dir/src/GUI/UI/roundedPanel/roundedPanel.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  -L/opt/homebrew/lib  -framework IOKit  -framework Carbon  -framework Cocoa  -framework QuartzCore  -framework AudioToolbox  -framework System  -framework OpenGL  -lwx_osx_cocoau_core-3.2  -lwx_baseu-3.2
   LINK_PATH = -L/opt/homebrew/lib
