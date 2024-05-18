@@ -1,21 +1,21 @@
 #include "window.hpp"
 
-wxIMPLEMENT_APP(MyApp);
+wxIMPLEMENT_APP(Main);
 
-bool MyApp::OnInit() {
-    MyFrame *frame = new MyFrame("Time Tracker");
+bool Main::OnInit() {
+    MainFrame *frame = new MainFrame("Time Tracker");
     frame->Show(true);
     return true;
 }
 
-wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
-EVT_BUTTON(wxID_ANY, MyFrame::OnStart)
-EVT_BUTTON(wxID_ANY, MyFrame::OnStop)
-EVT_BUTTON(wxID_ANY, MyFrame::OnReset)
-EVT_TIMER(ID_Timer, MyFrame::OnTimer)
+wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
+EVT_BUTTON(wxID_ANY, MainFrame::OnStart)
+EVT_BUTTON(wxID_ANY, MainFrame::OnStop)
+EVT_BUTTON(wxID_ANY, MainFrame::OnReset)
+EVT_TIMER(ID_Timer, MainFrame::OnTimer)
 wxEND_EVENT_TABLE()
 
-MyFrame::MyFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title) {
+MainFrame::MainFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title) {
     wxPanel* panel = new wxPanel(this, wxID_ANY);
 
     wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
@@ -38,25 +38,25 @@ MyFrame::MyFrame(const wxString& title) : wxFrame(nullptr, wxID_ANY, title) {
     m_seconds = 0;
 }
 
-void MyFrame::OnStart(wxCommandEvent& event) {
+void MainFrame::OnStart(wxCommandEvent& event) {
     if (!m_timer->IsRunning()) {
         m_timer->Start(1000); // 1 second interval
     }
 }
 
-void MyFrame::OnStop(wxCommandEvent& event) {
+void MainFrame::OnStop(wxCommandEvent& event) {
     if (m_timer->IsRunning()) {
         m_timer->Stop();
     }
 }
 
-void MyFrame::OnReset(wxCommandEvent& event) {
+void MainFrame::OnReset(wxCommandEvent& event) {
     m_timer->Stop();
     m_seconds = 0;
     m_timerDisplay->SetLabel("00:00:00");
 }
 
-void MyFrame::OnTimer(wxTimerEvent& event) {
+void MainFrame::OnTimer(wxTimerEvent& event) {
     m_seconds++;
     int hours = m_seconds / 3600;
     int minutes = (m_seconds % 3600) / 60;

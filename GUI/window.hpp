@@ -2,14 +2,14 @@
 #define TIMER_WINDOW_HPP
 #include <wx/wx.h>
 
-class MyApp : public wxApp {
+class Main : public wxApp {
 public:
     virtual bool OnInit();
 };
 
-class MyFrame : public wxFrame {
+class MainFrame : public wxFrame {
 public:
-    MyFrame(const wxString& title);
+    MainFrame(const wxString& title);
 
 private:
     void OnStart(wxCommandEvent& event);
@@ -20,7 +20,7 @@ private:
     wxTimer* m_timer;
     int m_seconds;
 
-wxDECLARE_EVENT_TABLE();
+    wxDECLARE_EVENT_TABLE();
 
     void OnTimer(wxTimerEvent &event);
 };
