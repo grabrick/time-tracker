@@ -6,13 +6,16 @@
 #include <QGraphicsDropShadowEffect>
 
 #include "GUI/timeBlock/timeBlock.hpp"
+#include "GUI/buttonsBlock/buttonsBlock.hpp"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
+
     // Вертикали
     QVBoxLayout *mainLayout = new QVBoxLayout;
     QHBoxLayout *hLayout = new QHBoxLayout;
     QHBoxLayout *timeLayout = new QHBoxLayout;
+    QHBoxLayout *buttonsLayout = new QHBoxLayout;
 
     QWidget window;
     window.setWindowTitle("Time Tracker");
@@ -23,18 +26,16 @@ int main(int argc, char *argv[]) {
     title->setStyleSheet("QLabel { font-family: Arial; font-size: 25pt; }");
     title->setAlignment(Qt::AlignCenter);
 
+    // Компоновка для Title
+    hLayout->addStretch();
+    hLayout->addWidget(title);
+    hLayout->addStretch();
 
 
     // Создаем три блока
     QFrame* hourBlock = createBlock("0H");
     QFrame* minuteBlock = createBlock("0M");
     QFrame* secondBlock = createBlock("0S");
-
-
-    // Компоновка для фрейма
-    hLayout->addStretch();
-    hLayout->addWidget(title);
-    hLayout->addStretch();
 
     // Компоновка для основного окна
     mainLayout->addLayout(hLayout);
@@ -45,12 +46,21 @@ int main(int argc, char *argv[]) {
     timeLayout->addWidget(secondBlock);
     timeLayout->addStretch();
 
-//    mainLayout->addStretch();
     mainLayout->addLayout(timeLayout);
+
+
+    QFrame* buttons_el = createButtonsWrapper();
+
+    buttonsLayout->addStretch();
+    buttonsLayout->addWidget(buttons_el);
+    buttonsLayout->addStretch();
+
+    mainLayout->addLayout(buttonsLayout);
     mainLayout->addStretch();
 
-    window.setLayout(mainLayout);
 
+
+    window.setLayout(mainLayout);
     window.show();
     return app.exec();
 }

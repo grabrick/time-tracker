@@ -258,6 +258,18 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.hpp",
+			"MU",
+			"FXIUYHZVXN/moc_buttons.cpp",
+			null
+		],
+		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.hpp",
+			"MU",
+			"Q3GMEFSNTK/moc_buttonsBlock.cpp",
+			null
+		],
+		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp",
 			"MU",
 			"5HXQZSA2BB/moc_timeBlock.cpp",
@@ -323,6 +335,16 @@
 	"SETTINGS_FILE" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.cpp",
+			"MU",
+			null
+		],
 		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.cpp",
 			"MU",

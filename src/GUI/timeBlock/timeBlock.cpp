@@ -20,7 +20,7 @@ QFrame* createBlock(const QString& text) {
 
     QLabel* label = new QLabel(text, frame);
     label->setAlignment(Qt::AlignCenter);
-    label->setStyleSheet("QLabel { font-family: Arial; font-size: 30pt; color: white; }");
+    label->setStyleSheet("QLabel { font-family: Arial; font-size: 30pt; color: white }");
 
     QVBoxLayout* layout = new QVBoxLayout(frame);
     layout->addWidget(label);

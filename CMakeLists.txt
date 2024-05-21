@@ -18,6 +18,10 @@ add_executable(
         timer src/main.cpp
         src/GUI/timeBlock/timeBlock.cpp
         src/GUI/timeBlock/timeBlock.hpp
+        src/GUI/buttonsBlock/buttonsBlock.cpp
+        src/GUI/buttonsBlock/buttonsBlock.hpp
+        src/GUI/buttonsBlock/buttons/buttons.cpp
+        src/GUI/buttonsBlock/buttons/buttons.hpp
 )
 
 target_link_libraries(timer

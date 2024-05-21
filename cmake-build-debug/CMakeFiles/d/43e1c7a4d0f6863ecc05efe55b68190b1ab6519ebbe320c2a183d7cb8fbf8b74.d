@@ -41,6 +41,10 @@ timer_autogen/timestamp: \
   CMakeFiles/3.27.8/CMakeCCompiler.cmake \
   CMakeFiles/3.27.8/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.8/CMakeSystem.cmake \
+  /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.cpp \
+  /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.hpp \
+  /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.cpp \
+  /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.hpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.cpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp \
   /Users/kirill/CLionProjects/timer/src/main.cpp \
