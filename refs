@@ -1,0 +1,11 @@
+mainWindowColor {
+    HEX: 131619,
+}
+
+mainFrameElColor {
+    HEX: 1D2227,
+}
+
+textColor {
+    HEX: ffffff
+}

@@ -1,3 +1,5 @@
 /Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer.dir
 /Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer_autogen_timestamp_deps.dir
+/Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer_autogen.dir
