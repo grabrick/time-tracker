@@ -47,6 +47,8 @@ timer_autogen/timestamp: \
   /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.hpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.cpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp \
+  /Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.cpp \
+  /Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.hpp \
   /Users/kirill/CLionProjects/timer/src/main.cpp \
   /opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6/FindWrapAtomic.cmake \
   /opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6/FindWrapOpenGL.cmake \

@@ -22,6 +22,8 @@ add_executable(
         src/GUI/buttonsBlock/buttonsBlock.hpp
         src/GUI/buttonsBlock/buttons/buttons.cpp
         src/GUI/buttonsBlock/buttons/buttons.hpp
+        src/assets/animation/animatedButton/animatedButton.cpp
+        src/assets/animation/animatedButton/animatedButton.hpp
 )
 
 target_link_libraries(timer

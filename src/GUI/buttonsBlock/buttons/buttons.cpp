@@ -1,6 +1,8 @@
 #include <QPushButton>
 #include <QFrame>
 #include <QGraphicsDropShadowEffect>
+#include <QPropertyAnimation>
+
 #include "buttons.hpp"
 
 QPushButton* createButton(QFrame* frame, QIcon icons) {
@@ -10,7 +12,19 @@ QPushButton* createButton(QFrame* frame, QIcon icons) {
     button->setIcon(icons);
     button->setIconSize(QSize(35, 35));
     button->setFixedSize(55, 55);
-    button->setStyleSheet("QPushButton { background-color: #4B5662; outline: none; border: none; border-radius: 20px }");
+    button->setStyleSheet(
+            "QPushButton { "
+                "outline: none; "
+                "border: none; "
+                "border-radius: 20px; "
+                "background-color: #4B5662"
+            "}"
+            "QPushButton:hover { "
+                "background-color: #8393A3; "
+            "}"
+    );
+
+    button->setCursor(Qt::PointingHandCursor);
 
     shadowEffect->setBlurRadius(5);
     shadowEffect->setXOffset(0);
