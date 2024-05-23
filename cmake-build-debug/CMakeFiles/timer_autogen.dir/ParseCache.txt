@@ -851,9 +851,11 @@
  mdp:/opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h
  mdp:/opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
 /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.cpp
+/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.hpp
 /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.hpp
 /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.cpp
 /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp
 /Users/kirill/CLionProjects/timer/src/main.cpp
 /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.hpp
 /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.cpp
+/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.cpp

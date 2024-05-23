@@ -97,6 +97,14 @@ build CMakeFiles/timer.dir/src/assets/animation/animatedButton/animatedButton.cp
   OBJECT_DIR = CMakeFiles/timer.dir
   OBJECT_FILE_DIR = CMakeFiles/timer.dir/src/assets/animation/animatedButton
 
+build CMakeFiles/timer.dir/src/GUI/historyBlock/historyBlock.cpp.o: CXX_COMPILER__timer_unscanned_Debug /Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.cpp || cmake_object_order_depends_target_timer
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/timer.dir/src/GUI/historyBlock/historyBlock.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
+  INCLUDES = -isystem /Users/kirill/CLionProjects/timer/cmake-build-debug/timer_autogen/include -isystem /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Headers -iframework /opt/homebrew/Cellar/6.7.0/macos/lib -isystem /opt/homebrew/Cellar/6.7.0/macos/mkspecs/macx-clang -isystem /opt/homebrew/Cellar/6.7.0/macos/include -isystem /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Headers -isystem /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/timer.dir
+  OBJECT_FILE_DIR = CMakeFiles/timer.dir/src/GUI/historyBlock
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target timer
@@ -105,7 +113,7 @@ build CMakeFiles/timer.dir/src/assets/animation/animatedButton/animatedButton.cp
 #############################################
 # Link the executable timer
 
-build timer: CXX_EXECUTABLE_LINKER__timer_Debug CMakeFiles/timer.dir/timer_autogen/mocs_compilation.cpp.o CMakeFiles/timer.dir/src/main.cpp.o CMakeFiles/timer.dir/src/GUI/timeBlock/timeBlock.cpp.o CMakeFiles/timer.dir/src/GUI/buttonsBlock/buttonsBlock.cpp.o CMakeFiles/timer.dir/src/GUI/buttonsBlock/buttons/buttons.cpp.o CMakeFiles/timer.dir/src/assets/animation/animatedButton/animatedButton.cpp.o | /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || timer_autogen timer_autogen_timestamp_deps
+build timer: CXX_EXECUTABLE_LINKER__timer_Debug CMakeFiles/timer.dir/timer_autogen/mocs_compilation.cpp.o CMakeFiles/timer.dir/src/main.cpp.o CMakeFiles/timer.dir/src/GUI/timeBlock/timeBlock.cpp.o CMakeFiles/timer.dir/src/GUI/buttonsBlock/buttonsBlock.cpp.o CMakeFiles/timer.dir/src/GUI/buttonsBlock/buttons/buttons.cpp.o CMakeFiles/timer.dir/src/assets/animation/animatedButton/animatedButton.cpp.o CMakeFiles/timer.dir/src/GUI/historyBlock/historyBlock.cpp.o | /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || timer_autogen timer_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/Cellar/6.7.0/macos/lib  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui  /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker AGL  -framework AppKit  -framework ImageIO  -framework Metal
   LINK_PATH = -iframework /opt/homebrew/Cellar/6.7.0/macos/lib

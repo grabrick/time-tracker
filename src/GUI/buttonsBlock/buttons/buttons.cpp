@@ -25,14 +25,15 @@ QPushButton* createButton(QFrame* frame, QIcon icons) {
                 "background-color: #8393A3; "
             "}"
     );
+//    button->setStyleSheet("QPushButton { border: 2px solid green }");
 
     button->setCursor(Qt::PointingHandCursor);
 
-//    shadowEffect->setBlurRadius(5);
-//    shadowEffect->setXOffset(0);
-//    shadowEffect->setYOffset(2);
-//    shadowEffect->setColor(QColor(255, 255, 255, 64));
-//    button->setGraphicsEffect(shadowEffect);
+    shadowEffect->setBlurRadius(5);
+    shadowEffect->setXOffset(0);
+    shadowEffect->setYOffset(2);
+    shadowEffect->setColor(QColor(255, 255, 255, 64));
+    button->setGraphicsEffect(shadowEffect);
 
     return button;
 }

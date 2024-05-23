@@ -270,6 +270,12 @@
 			null
 		],
 		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.hpp",
+			"MU",
+			"BFRFTPUYOG/moc_historyBlock.cpp",
+			null
+		],
+		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp",
 			"MU",
 			"5HXQZSA2BB/moc_timeBlock.cpp",
@@ -348,6 +354,11 @@
 		],
 		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.cpp",
 			"MU",
 			null
 		],

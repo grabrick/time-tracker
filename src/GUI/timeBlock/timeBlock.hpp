@@ -3,6 +3,6 @@
 #include <QFrame>
 #include <QString>
 
-QFrame* createBlock(const QString& text);
+QFrame* createBlock(const QString& titleText, const QString& timeText);
 
 #endif //TIMER_TIMEBLOCK_HPP

@@ -729,6 +729,8 @@ timer_autogen/timestamp: \
   /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttons/buttons.hpp \
   /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.cpp \
   /Users/kirill/CLionProjects/timer/src/GUI/buttonsBlock/buttonsBlock.hpp \
+  /Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.cpp \
+  /Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.hpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.cpp \
   /Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp \
   /Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.cpp \

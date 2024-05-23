@@ -2,29 +2,46 @@
 #include <QGraphicsDropShadowEffect>
 #include <QLabel>
 #include <QVBoxLayout>
-#include "timeBlock.hpp"
 
-QFrame* createBlock(const QString& text) {
-    QFrame* frame = new QFrame();
-    frame->setFrameShape(QFrame::StyledPanel);
-    frame->setFixedSize(100, 100);
-    frame->setStyleSheet("QFrame { background-color: #1D2227; border-radius: 20px; }");
+QFrame* createBlock(const QString& titleText, const QString& timeText) {
+    QFrame* globalFrame = new QFrame();
+    globalFrame->setFixedSize(90, 110);
+//    globalFrame->setStyleSheet("QFrame { border: 2px solid yellow }");
 
-    // Добавляем тень к блоку
+    QLabel* title = new QLabel(titleText, globalFrame);
+    title->setFixedSize(80, 20);
+    title->setAlignment(Qt::AlignCenter);
+    title->setStyleSheet("QLabel { font-family: Arial; font-size: 14px; color: white; border-radius: 0px; }");
+
+    QFrame* timeFrame = new QFrame(globalFrame);
+    timeFrame->setFrameShape(QFrame::StyledPanel);
+    timeFrame->setFixedSize(80, 80);
+    timeFrame->setStyleSheet("QFrame { background-color: #1D2227; border-radius: 20px; }");
+
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
     shadowEffect->setBlurRadius(20);
     shadowEffect->setXOffset(0);
     shadowEffect->setYOffset(4);
     shadowEffect->setColor(QColor(29, 34, 39, 160));
-    frame->setGraphicsEffect(shadowEffect);
+    timeFrame->setGraphicsEffect(shadowEffect);
 
-    QLabel* label = new QLabel(text, frame);
-    label->setAlignment(Qt::AlignCenter);
-    label->setStyleSheet("QLabel { font-family: Arial; font-size: 30pt; color: white }");
+    QLabel* timeLabel = new QLabel(timeText, timeFrame);
+    timeLabel->setAlignment(Qt::AlignCenter);
+    timeLabel->setStyleSheet("QLabel { font-family: Arial; font-size: 30pt; color: white }");
 
-    QVBoxLayout* layout = new QVBoxLayout(frame);
-    layout->addWidget(label);
-    layout->setAlignment(label, Qt::AlignCenter);
+    // Главный макет для глобального фрейма
+    QVBoxLayout* globalLayout = new QVBoxLayout(globalFrame);
+    globalLayout->addWidget(title, 0, Qt::AlignCenter);
+    globalLayout->addWidget(timeFrame, 0, Qt::AlignCenter);
+    globalLayout->setAlignment(Qt::AlignVCenter);
+    globalLayout->setContentsMargins(0, 0, 0, 0);
+    globalLayout->setSpacing(0);
 
-    return frame;
+    // Макет для фрейма времени
+    QVBoxLayout* timeLayout = new QVBoxLayout(timeFrame);
+    timeLayout->addWidget(timeLabel);
+    timeLayout->setAlignment(timeLabel, Qt::AlignCenter);
+    timeLayout->setContentsMargins(0, 0, 0, 0);
+
+    return globalFrame;
 }

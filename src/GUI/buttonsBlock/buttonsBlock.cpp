@@ -19,6 +19,7 @@ QFrame* createButtonsWrapper() {
 
     frame->setFrameShape(QFrame::StyledPanel);
     frame->setMinimumSize(200, 80);
+//    frame->setStyleSheet("QFrame { border: 2px solid green }");
     frame->setStyleSheet("QFrame { background-color: #323941; border-radius: 20px; }");
 
     QPushButton* play_button = createButton(frame, play_icon);
@@ -26,6 +27,7 @@ QFrame* createButtonsWrapper() {
     QPushButton* clear_button = createButton(frame, clear_icon);
 
     QHBoxLayout* layout = new QHBoxLayout(frame);
+
     layout->addStretch();
     layout->addWidget(play_button);
     layout->addWidget(pause_button);
