@@ -7,7 +7,6 @@
 #include "../../../assets/animation/animatedButton/animatedButton.hpp"
 
 QPushButton* createButton(QFrame* frame, QIcon icons) {
-//    QPushButton* button = new QPushButton(frame);
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
     AnimatedButton *button = new AnimatedButton(frame);
 

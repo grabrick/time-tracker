@@ -270,6 +270,12 @@
 			null
 		],
 		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/files/files.hpp",
+			"MU",
+			"EOZH4VGUZ4/moc_files.cpp",
+			null
+		],
+		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.hpp",
 			"MU",
 			"BFRFTPUYOG/moc_historyBlock.cpp",
@@ -279,6 +285,12 @@
 			"/Users/kirill/CLionProjects/timer/src/GUI/timeBlock/timeBlock.hpp",
 			"MU",
 			"5HXQZSA2BB/moc_timeBlock.cpp",
+			null
+		],
+		[
+			"/Users/kirill/CLionProjects/timer/src/app/timerApp.hpp",
+			"MU",
+			"ISMKEKEPX5/moc_timerApp.cpp",
 			null
 		],
 		[
@@ -358,6 +370,11 @@
 			null
 		],
 		[
+			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/files/files.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/kirill/CLionProjects/timer/src/GUI/historyBlock/historyBlock.cpp",
 			"MU",
 			null
@@ -367,6 +384,7 @@
 			"MU",
 			null
 		],
+		[ "/Users/kirill/CLionProjects/timer/src/app/timerApp.cpp", "MU", null ],
 		[
 			"/Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.cpp",
 			"MU",

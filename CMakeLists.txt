@@ -26,6 +26,10 @@ add_executable(
         src/assets/animation/animatedButton/animatedButton.hpp
         src/GUI/historyBlock/historyBlock.cpp
         src/GUI/historyBlock/historyBlock.hpp
+        src/app/timerApp.cpp
+        src/app/timerApp.hpp
+        src/GUI/historyBlock/files/files.cpp
+        src/GUI/historyBlock/files/files.hpp
 )
 
 target_link_libraries(timer
