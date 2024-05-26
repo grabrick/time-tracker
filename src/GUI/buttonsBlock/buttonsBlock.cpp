@@ -11,10 +11,10 @@
 QFrame* createButtonsWrapper() {
     QFrame* frame = new QFrame();
 
-    QPixmap play_pixmap = QPixmap("icons/play-circle.png");
-    QPixmap pause_pixmap = QPixmap("icons/pause-circle.png");
-    QPixmap save_pixmap = QPixmap("icons/save-circle.png");
-    QPixmap clear_pixmap = QPixmap("icons/x-circle.png");
+    QPixmap play_pixmap = QPixmap(":/icons/play-circle.png");
+    QPixmap pause_pixmap = QPixmap(":/icons/pause-circle.png");
+    QPixmap save_pixmap = QPixmap(":/icons/save-circle.png");
+    QPixmap clear_pixmap = QPixmap(":/icons/x-circle.png");
 
     QIcon play_icon(play_pixmap);
     QIcon pause_icon(pause_pixmap);

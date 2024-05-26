@@ -802,6 +802,7 @@ timer_autogen/timestamp: \
   /Users/kirill/CLionProjects/timer/src/app/timerApp.hpp \
   /Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.cpp \
   /Users/kirill/CLionProjects/timer/src/assets/animation/animatedButton/animatedButton.hpp \
+  /Users/kirill/CLionProjects/timer/src/assets/resources.qrc \
   /Users/kirill/CLionProjects/timer/src/main.cpp \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QEvent \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QPointer \
@@ -812,6 +813,7 @@ timer_autogen/timestamp: \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qabstractanimation.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qabstractitemmodel.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -856,11 +858,13 @@ timer_autogen/timestamp: \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -883,6 +887,7 @@ timer_autogen/timestamp: \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qpropertyanimation.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
@@ -955,16 +960,36 @@ timer_autogen/timestamp: \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QFrame \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsOpacityEffect \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QListWidget \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemview.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractscrollarea.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicseffect.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistview.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlistwidget.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qslider.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyle.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qstyleoption.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
+  /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
   /opt/homebrew/Cellar/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \

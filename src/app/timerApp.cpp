@@ -7,6 +7,7 @@
 #include "../GUI/timeBlock/timeBlock.hpp"
 #include "../GUI/buttonsBlock/buttonsBlock.hpp"
 #include "../GUI/historyBlock/historyBlock.hpp"
+#include "../GUI//historyBlock/files/files.hpp"
 
 using namespace std;
 
@@ -20,7 +21,6 @@ TimerApp::TimerApp(QWidget* parent) : QWidget(parent), seconds(0), timerStatus(n
     minuteBlock = createBlock("Минута", "0");
     secondBlock = createBlock("Секунда", "0");
 
-    // Компоновка для основного окна
     mainLayout->addLayout(timeLayout);
     timeLayout->addStretch();
     timeLayout->addWidget(hourBlock);
@@ -34,15 +34,15 @@ TimerApp::TimerApp(QWidget* parent) : QWidget(parent), seconds(0), timerStatus(n
     buttonsLayout->addWidget(buttons_el);
     buttonsLayout->addStretch();
 
+    QFrame* history_el = createHistoryWrapper(this);
+
+    historyLayout->addStretch();
+    historyLayout->addWidget(history_el);
+    historyLayout->addStretch();
+
     mainLayout->addLayout(buttonsLayout);
     mainLayout->addLayout(historyLayout);
     mainLayout->addStretch();
-
-//    QFrame* history_el = createHistoryWrapper();
-//
-//    historyLayout->addStretch();
-//    historyLayout->addWidget(history_el);
-//    historyLayout->addStretch();
 
     playButton = buttons_el->findChild<QPushButton*>("play_button");
     pauseButton = buttons_el->findChild<QPushButton*>("pause_button");
@@ -91,7 +91,26 @@ void TimerApp::resetTimer() {
 }
 
 void TimerApp::saveResult() {
+    int hrs = seconds / 3600;
+    int mins = (seconds % 3600) / 60;
+    int secs = seconds % 60;
 
+    TimerResult result = {"Результат " + std::to_string(results.size() + 1), hrs, mins, secs};
+    results.push_back(result);
+
+    qDebug() << "Количество сохраненных элементов: " << results.size();
+
+    timer->stop();
+    seconds = 0;
+    *timerStatus = "stop";
+    updateDisplay();
+    playButton->show();
+    pauseButton->hide();
+
+    // Создаем новый элемент и добавляем его в макет истории
+    QString resultText = QString::fromStdString(result.title) + ": " + QString::number(result.hours) + " ч " + QString::number(result.minutes) + " мин " + QString::number(result.seconds) + " сек";
+    QFrame* resultFrame = files(resultText);
+    historyLayout->insertWidget(historyLayout->count() - 1, resultFrame);
 }
 
 void TimerApp::updateTime() {

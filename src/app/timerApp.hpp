@@ -7,8 +7,17 @@
 #include <iostream>
 #include <string>
 #include <QPushButton>
+#include <QListWidget>
+#include <QVBoxLayout>
 
 using std::string;
+
+struct TimerResult {
+    std::string title;
+    int hours;
+    int minutes;
+    int seconds;
+};
 
 class TimerApp : public QWidget {
     Q_OBJECT
@@ -16,27 +25,33 @@ class TimerApp : public QWidget {
 public:
     TimerApp(QWidget* parent = nullptr);
 
+    void setHistoryLayout(QVBoxLayout* layout) {
+        historyLayout = layout;
+    }
+
 private slots:
     void startTimer();
     void pauseTimer();
     void resetTimer();
-    void saveResult();
     void updateTime();
-    void updateDisplay();
+    void saveResult();
 
 private:
+    void updateDisplay();
+
+    QTimer* timer;
+    int seconds;
+    std::string* timerStatus;
+    std::vector<TimerResult> results;
+
     QFrame* hourBlock;
     QFrame* minuteBlock;
     QFrame* secondBlock;
-    QTimer* timer;
-    int seconds;
-
-    string* timerStatus;
-
     QPushButton* playButton;
     QPushButton* pauseButton;
     QPushButton* clearButton;
     QPushButton* saveButton;
+    QVBoxLayout* historyLayout;
 };
 
 #endif //TIMER_TIMERAPP_HPP

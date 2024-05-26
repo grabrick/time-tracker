@@ -15,7 +15,8 @@ find_package(Qt6 COMPONENTS
         REQUIRED)
 
 add_executable(
-        timer src/main.cpp
+        timer
+        src/main.cpp
         src/GUI/timeBlock/timeBlock.cpp
         src/GUI/timeBlock/timeBlock.hpp
         src/GUI/buttonsBlock/buttonsBlock.cpp
@@ -30,6 +31,7 @@ add_executable(
         src/app/timerApp.hpp
         src/GUI/historyBlock/files/files.cpp
         src/GUI/historyBlock/files/files.hpp
+        src/assets/resources.qrc  # Ресурсный файл
 )
 
 target_link_libraries(timer

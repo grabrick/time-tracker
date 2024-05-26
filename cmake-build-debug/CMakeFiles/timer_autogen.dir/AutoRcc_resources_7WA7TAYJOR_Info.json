@@ -1,0 +1,27 @@
+{
+	"BUILD_DIR" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/timer_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/kirill/CLionProjects/timer/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/kirill/CLionProjects/timer/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/kirill/CLionProjects/timer",
+	"CMAKE_SOURCE_DIR" : "/Users/kirill/CLionProjects/timer",
+	"INCLUDE_DIR" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/timer_autogen/include",
+	"INPUTS" : 
+	[
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/play-circle.png",
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/window_icons.ico",
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/save-circle.png",
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/w_icons.png",
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/x-circle.png",
+		"/Users/kirill/CLionProjects/timer/src/assets/icons/pause-circle.png"
+	],
+	"LOCK_FILE" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer_autogen.dir/AutoRcc_resources_7WA7TAYJOR_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "7WA7TAYJOR",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/opt/homebrew/Cellar/6.7.0/macos/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/CMakeFiles/timer_autogen.dir/AutoRcc_resources_7WA7TAYJOR_Used.txt",
+	"SOURCE" : "/Users/kirill/CLionProjects/timer/src/assets/resources.qrc",
+	"VERBOSITY" : 0
+}

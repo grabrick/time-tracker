@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
     TimerApp window;
 
     window.setWindowTitle("Time Tracker");
+    window.setWindowIcon(QIcon(":/icons/w_icons.png"));
     window.setStyleSheet("QWidget { background-color: #131619 }");
 //    window.setFixedSize(600, 650);
 

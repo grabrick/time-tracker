@@ -40,9 +40,8 @@ constexpr auto qt_meta_stringdata_CLASSTimerAppENDCLASS = QtMocHelpers::stringDa
     "",
     "pauseTimer",
     "resetTimer",
-    "saveResult",
     "updateTime",
-    "updateDisplay"
+    "saveResult"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -55,7 +54,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTimerAppENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,15 +62,13 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTimerAppENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   50,    2, 0x08,    1 /* Private */,
-       3,    0,   51,    2, 0x08,    2 /* Private */,
-       4,    0,   52,    2, 0x08,    3 /* Private */,
-       5,    0,   53,    2, 0x08,    4 /* Private */,
-       6,    0,   54,    2, 0x08,    5 /* Private */,
-       7,    0,   55,    2, 0x08,    6 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    0,   47,    2, 0x08,    4 /* Private */,
+       6,    0,   48,    2, 0x08,    5 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -96,11 +93,9 @@ Q_CONSTINIT const QMetaObject TimerApp::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'resetTimer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'saveResult'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updateTime'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'updateDisplay'
+        // method 'saveResult'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -115,9 +110,8 @@ void TimerApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 0: _t->startTimer(); break;
         case 1: _t->pauseTimer(); break;
         case 2: _t->resetTimer(); break;
-        case 3: _t->saveResult(); break;
-        case 4: _t->updateTime(); break;
-        case 5: _t->updateDisplay(); break;
+        case 3: _t->updateTime(); break;
+        case 4: _t->saveResult(); break;
         default: ;
         }
     }
@@ -143,13 +137,13 @@ int TimerApp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 5;
     }
     return _id;
 }

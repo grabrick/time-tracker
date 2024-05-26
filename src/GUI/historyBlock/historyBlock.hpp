@@ -2,7 +2,8 @@
 #define TIMER_HISTORYBLOCK_HPP
 
 #include <QFrame>
+#include "../../app/timerApp.hpp"
 
-QFrame* createHistoryWrapper();
+QFrame* createHistoryWrapper(TimerApp* TimerApp);
 
 #endif //TIMER_HISTORYBLOCK_HPP

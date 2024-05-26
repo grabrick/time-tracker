@@ -17,7 +17,7 @@ QPushButton* createButton(QFrame* frame, QIcon icons) {
             "QPushButton { "
                 "outline: none; "
                 "border: none; "
-                "border-radius: 20px; "
+                "border-radius: 15px; "
                 "background-color: #4B5662"
             "}"
             "QPushButton:hover { "

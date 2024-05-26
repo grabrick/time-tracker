@@ -250,7 +250,8 @@
 		"/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake",
 		"/opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake",
 		"/opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-relwithdebinfo.cmake",
-		"/opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake"
+		"/opt/homebrew/Cellar/6.7.0/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake",
+		"/Users/kirill/CLionProjects/timer/src/assets/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/kirill/CLionProjects/timer",
 	"DEP_FILE" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/timer_autogen/deps",
