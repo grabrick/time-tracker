@@ -174,7 +174,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics"
+					"fragment" : "-O3 -DNDEBUG -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics"
 				}
 			],
 			"defines" : 
@@ -186,6 +186,10 @@
 				{
 					"backtrace" : 25,
 					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 25,
@@ -215,7 +219,7 @@
 				{
 					"backtrace" : 0,
 					"isSystem" : true,
-					"path" : "/Users/kirill/CLionProjects/timer/cmake-build-debug/timer_autogen/include"
+					"path" : "/Users/kirill/CLionProjects/timer/cmake-build-release/timer_autogen/include"
 				},
 				{
 					"backtrace" : 25,
@@ -271,11 +275,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "timer_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "timer_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "timer_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "timer::@6890427a1f51a3e7e1df",
@@ -284,7 +288,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-O3 -DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -411,7 +415,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/timer_autogen/mocs_compilation.cpp",
+			"path" : "cmake-build-release/timer_autogen/mocs_compilation.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -505,26 +509,26 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/timer_autogen/timestamp",
+			"path" : "cmake-build-release/timer_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/timer_autogen/7WA7TAYJOR/qrc_resources.cpp",
+			"path" : "cmake-build-release/timer_autogen/7WA7TAYJOR/qrc_resources.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/timer_autogen/timestamp.rule",
+			"path" : "cmake-build-release/timer_autogen/timestamp.rule",
 			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/timer_autogen/7WA7TAYJOR/qrc_resources.cpp.rule",
+			"path" : "cmake-build-release/timer_autogen/7WA7TAYJOR/qrc_resources.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

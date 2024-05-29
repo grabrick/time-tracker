@@ -34,8 +34,10 @@ TimerApp::TimerApp(QWidget* parent) : QWidget(parent), seconds(0), timerStatus(n
     buttonsLayout->addWidget(buttons_el);
     buttonsLayout->addStretch();
 
-    QFrame* history_el = createHistoryWrapper(this);
-
+    history_el = createHistoryWrapper(this);
+    if (results.size() == 0) {
+        history_el->hide();
+    }
     historyLayout->addStretch();
     historyLayout->addWidget(history_el);
     historyLayout->addStretch();
@@ -44,10 +46,20 @@ TimerApp::TimerApp(QWidget* parent) : QWidget(parent), seconds(0), timerStatus(n
     mainLayout->addLayout(historyLayout);
     mainLayout->addStretch();
 
+    // Кнопки управлениея таймером
     playButton = buttons_el->findChild<QPushButton*>("play_button");
     pauseButton = buttons_el->findChild<QPushButton*>("pause_button");
     clearButton = buttons_el->findChild<QPushButton*>("clear_button");
     saveButton = buttons_el->findChild<QPushButton*>("save_button");
+
+    // Кнопки управлениея историей
+    clearHistoryButton = history_el->findChild<QPushButton*>("cleanUpButtons");
+
+    if (clearHistoryButton) {
+        connect(clearHistoryButton, &QPushButton::clicked, this, &TimerApp::clearHistory);
+    } else {
+        qDebug() << "Ошибка: Не удалось получить указатель на кнопку clearHistoryButton";
+    }
 
     if (playButton && pauseButton && clearButton && saveButton) {
         connect(playButton, &QPushButton::clicked, this, &TimerApp::startTimer);
@@ -98,8 +110,6 @@ void TimerApp::saveResult() {
     TimerResult result = {"Результат " + std::to_string(results.size() + 1), hrs, mins, secs};
     results.push_back(result);
 
-    qDebug() << "Количество сохраненных элементов: " << results.size();
-
     timer->stop();
     seconds = 0;
     *timerStatus = "stop";
@@ -110,7 +120,35 @@ void TimerApp::saveResult() {
     // Создаем новый элемент и добавляем его в макет истории
     QString resultText = QString::fromStdString(result.title) + ": " + QString::number(result.hours) + " ч " + QString::number(result.minutes) + " мин " + QString::number(result.seconds) + " сек";
     QFrame* resultFrame = files(resultText);
-    historyLayout->insertWidget(historyLayout->count() - 1, resultFrame);
+    historyLayout->insertWidget(historyLayout->count(), resultFrame);
+    historyFrames.push_back(resultFrame);
+
+    history_el->show();
+}
+
+void TimerApp::filterHistory(const QString& searchText) {
+    for (QFrame* frame : historyFrames) {
+        QLabel* label = frame->findChild<QLabel*>();
+        if (label && label->text().contains(searchText, Qt::CaseInsensitive)) {
+            frame->show();
+        } else {
+            frame->hide();
+        }
+    }
+}
+
+void TimerApp::clearHistory() {
+    QLayoutItem* item;
+    while ((item = historyLayout->takeAt(0))) {
+        QWidget* widget = item->widget();
+        if (widget) {
+            widget->deleteLater();
+        }
+        delete item;
+    }
+
+    results.clear();
+    historyFrames.clear();
 }
 
 void TimerApp::updateTime() {

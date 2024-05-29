@@ -36,6 +36,11 @@ private slots:
     void updateTime();
     void saveResult();
 
+    void clearHistory();
+
+public slots:
+    void filterHistory(const QString& searchText);
+
 private:
     void updateDisplay();
 
@@ -47,11 +52,16 @@ private:
     QFrame* hourBlock;
     QFrame* minuteBlock;
     QFrame* secondBlock;
+
     QPushButton* playButton;
     QPushButton* pauseButton;
     QPushButton* clearButton;
     QPushButton* saveButton;
+    QPushButton* clearHistoryButton;
+
     QVBoxLayout* historyLayout;
+    QFrame* history_el;
+    std::vector<QFrame*> historyFrames;
 };
 
 #endif //TIMER_TIMERAPP_HPP

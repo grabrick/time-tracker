@@ -8,7 +8,7 @@
 
 QPushButton* createButton(QFrame* frame, QIcon icons) {
     QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
-    AnimatedButton *button = new AnimatedButton(frame);
+    AnimatedButton* button = new AnimatedButton(frame);
 
     button->setIcon(icons);
     button->setIconSize(QSize(35, 35));

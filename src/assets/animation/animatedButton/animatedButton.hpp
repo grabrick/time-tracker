@@ -10,25 +10,19 @@
 
 class AnimatedButton : public QPushButton {
 Q_OBJECT
-    Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity)
 
 public:
     AnimatedButton(QWidget *parent = nullptr);
 
-    qreal opacity() const;
-    void setOpacity(qreal opacity);
-
 protected:
-    bool event(QEvent *event) override;
-
-private slots:
-//    void animateHover(bool entering);
-    void animatePress();
-//    void animateClicked();
-    void animateRelease();
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
 private:
-    QGraphicsOpacityEffect *m_opacityEffect;
+    void animatePress();
+    void animateRelease();
+
+    QRect originalGeometry;
 };
 
 #endif // ANIMATEDBUTTON_HPP
