@@ -1,6 +1,5 @@
 #include <QApplication>
 #include <QLabel>
-#include <QVBoxLayout>
 #include <QGraphicsDropShadowEffect>
 
 #include "app/timerApp.hpp"
