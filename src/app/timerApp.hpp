@@ -41,6 +41,9 @@ private slots:
 public slots:
     void filterHistory(const QString& searchText);
 
+    void editHistoryItem();
+    void deleteHistoryItem();
+
 private:
     void updateDisplay();
 

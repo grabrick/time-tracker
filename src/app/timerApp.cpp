@@ -2,6 +2,7 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLabel>
+#include <QInputDialog>
 #include <iostream>
 
 #include "../GUI/timeBlock/timeBlock.hpp"
@@ -107,7 +108,7 @@ void TimerApp::saveResult() {
     int mins = (seconds % 3600) / 60;
     int secs = seconds % 60;
 
-    TimerResult result = {"Результат " + std::to_string(results.size() + 1), hrs, mins, secs};
+    TimerResult result = {"Результат: "};
     results.push_back(result);
 
     timer->stop();
@@ -118,8 +119,25 @@ void TimerApp::saveResult() {
     pauseButton->hide();
 
     // Создаем новый элемент и добавляем его в макет истории
-    QString resultText = QString::fromStdString(result.title) + ": " + QString::number(result.hours) + " ч " + QString::number(result.minutes) + " мин " + QString::number(result.seconds) + " сек";
-    QFrame* resultFrame = files(resultText);
+    QString titleText = QString::fromStdString(result.title);
+    QString resultText = QString::number(hrs) + " ч " + QString::number(mins) + " мин " + QString::number(secs) + " сек";
+    QFrame* resultFrame = files(titleText, resultText);
+
+    // Подключаем сигналы кнопок к слотам
+    QPushButton* editButton = resultFrame->findChild<QPushButton*>("edit_buttons");
+    if (editButton) {
+        connect(editButton, &QPushButton::clicked, this, &TimerApp::editHistoryItem);
+    } else {
+        qDebug() << "Ошибка: Не удалось получить указатель на кнопку редактирования";
+    }
+
+    QPushButton* deleteButton = resultFrame->findChild<QPushButton*>("delete_buttons");
+    if (deleteButton) {
+        connect(deleteButton, &QPushButton::clicked, this, &TimerApp::deleteHistoryItem);
+    } else {
+        qDebug() << "Ошибка: Не удалось получить указатель на кнопку удаления";
+    }
+
     historyLayout->insertWidget(historyLayout->count(), resultFrame);
     historyFrames.push_back(resultFrame);
 
@@ -128,8 +146,8 @@ void TimerApp::saveResult() {
 
 void TimerApp::filterHistory(const QString& searchText) {
     for (QFrame* frame : historyFrames) {
-        QLabel* label = frame->findChild<QLabel*>();
-        if (label && label->text().contains(searchText, Qt::CaseInsensitive)) {
+        QLabel* title = frame->findChild<QLabel*>();
+        if (title && title->text().contains(searchText, Qt::CaseInsensitive)) {
             frame->show();
         } else {
             frame->hide();
@@ -149,6 +167,37 @@ void TimerApp::clearHistory() {
 
     results.clear();
     historyFrames.clear();
+}
+
+void TimerApp::editHistoryItem() {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+    if (button) {
+        QFrame* frame = qobject_cast<QFrame*>(button->parent()->parent());
+        if (frame) {
+            QLabel* label = frame->findChild<QLabel*>("title_label");
+            if (label) {
+                bool ok;
+                QString text = QInputDialog::getText(this, tr("Редактирование элемента"),
+                                                     tr("Измените результат:"), QLineEdit::Normal,
+                                                     label->text(), &ok);
+                if (ok && !text.isEmpty()) {
+                    label->setText(text);
+                }
+            }
+        }
+    }
+}
+
+void TimerApp::deleteHistoryItem() {
+    QPushButton* button = qobject_cast<QPushButton*>(sender());
+    if (button) {
+        QFrame* frame = qobject_cast<QFrame*>(button->parent()->parent());
+        if (frame) {
+            historyLayout->removeWidget(frame);
+            historyFrames.erase(std::remove(historyFrames.begin(), historyFrames.end(), frame), historyFrames.end());
+            frame->deleteLater();
+        }
+    }
 }
 
 void TimerApp::updateTime() {

@@ -3,6 +3,6 @@
 
 #include <QFrame>
 
-QFrame* files(const QString &text);
+QFrame* files(const QString &title, const QString &resultText);
 
 #endif //TIMER_FILES_HPP

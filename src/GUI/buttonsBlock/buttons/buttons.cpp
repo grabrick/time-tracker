@@ -7,7 +7,6 @@
 #include "../../../assets/animation/animatedButton/animatedButton.hpp"
 
 QPushButton* createButton(QFrame* frame, QIcon icons) {
-    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
     AnimatedButton* button = new AnimatedButton(frame);
 
     button->setIcon(icons);
@@ -24,14 +23,14 @@ QPushButton* createButton(QFrame* frame, QIcon icons) {
                 "background-color: #8393A3; "
             "}"
     );
-//    button->setStyleSheet("QPushButton { border: 2px solid green }");
 
     button->setCursor(Qt::PointingHandCursor);
 
-    shadowEffect->setBlurRadius(5);
+    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
+    shadowEffect->setBlurRadius(20);
     shadowEffect->setXOffset(0);
     shadowEffect->setYOffset(2);
-    shadowEffect->setColor(QColor(255, 255, 255, 64));
+    shadowEffect->setColor(QColor(255, 255, 255, 160));
     button->setGraphicsEffect(shadowEffect);
 
     return button;
